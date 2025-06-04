@@ -1,0 +1,61 @@
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Lista Empleados</title>
+    <link rel="stylesheet" th:href="@{/css/styles.css}">
+</head>
+<body>
+    <header>
+        <img style="color: white;" th:src="@{/imgs/gruporecoletas-logo.svg}" alt="logo de la empresa">
+        <div class="header-links">
+            <a href="./">Principal</a>
+        </div>
+    </header>
+    <main>
+        
+<br>
+<div>
+    <p>Listado empleados</p>
+    <table>
+        <tr>
+            <th>ID</th>
+            <th>Nombre</th>
+            <th>Fecha nacimiento</th>
+            <th>Horas extras</th>
+            <th>Ver registros</th>
+            <th>Eliminar</th>
+        </tr>
+        <tr th:each="user: ${users}">
+            <td th:text="${user.id}"></td>
+            <td th:text="${user.nombre}"></td>
+            <td th:text="${user.fecha_nac}"></td>
+            <td th:text="${horas[user.id]}"></td>
+            <td><a th:href="'/horas/' + ${user.id}">Ver</a></td>
+            <td>
+                <form class="delete_td" th:action="@{'/api/empleados/eliminar/' + ${user.id}}" method="post">
+                    <button class="delete_btn" type="submit">Eliminar</button>
+                </form>
+            </td>
+        </tr>
+    </table>
+</div>
+<div class="forms">
+    <form th:action="@{/api/empleados/crear}" method="post" th:object="${u}">
+        <p>Añadir Empleado</p>
+        <input type="text" placeholder="Nombre" th:field="*{nombre}" required>
+        <input type="date" th:field="*{fecha_nac}" required>
+        <input class="submit_btn" type="submit" value="Añadir Empleado">
+    </form>
+    <form th:action="@{/api/empleados/actualizar}" method="post" th:object="${u}">
+        <p>Modificar Empleado</p>
+        <select name="id" required>
+            <option value="">--Selecciona un empleado--</option>
+            <option th:each="user: ${users}" th:value="${user.id}" th:text="${user.id}"></option>
+        </select>
+        <input type="text" placeholder="Nombre" th:field="*{nombre}" required>
+        <input type="date" th:field="*{fecha_nac}" required>
+        <input class="submit_btn" type="submit" value="Modificar Empleado">
+    </form>
+</div>
+    </main>
+</body>
+</html>

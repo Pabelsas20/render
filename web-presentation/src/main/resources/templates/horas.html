@@ -1,0 +1,51 @@
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Lista Empleados</title>
+    <link rel="stylesheet" th:href="@{/css/styles.css}">
+</head>
+<body>
+    <header>
+        <img th:src="@{/imgs/gruporecoletas-logo.svg}" alt="logo de la empresa">
+        <div>
+            <a href="../lista">Volver al panel de empleados</a>
+        </div>
+    </header>
+    <main>
+        <div>
+            <p th:text="'Listado horas extras: ' + ${user.nombre}"></p>
+            <table>
+                <tr>
+                    <th>Fecha</th>
+                    <th>Hora inicio</th>
+                    <th>Hora fin</th>
+                    <th>Eliminar</th>
+                </tr>
+                <tr th:each="hora: ${horas}">
+                    <td th:text="${hora.fecha}"></td>
+                    <td th:text="${hora.hora_inicio}"></td>
+                    <td th:text="${hora.hora_fin}"></td>
+                    <td>
+                        <form class="delete_td" th:action="@{'/api/empleados/horas/eliminar/' + ${user.id} + '/' + ${hora.id}}" method="post">
+                            <button class="delete_btn" type="submit">Eliminar</button>
+                        </form>
+                    </td>
+                </tr>
+            </table>
+        </div>
+        <div class="forms">
+            
+            <form th:action="@{'/api/empleados/horas/crear/' + ${user.id}}" method="post" th:object="${h}">
+                <p>Añadir Registro</p>
+                <div th:if="${error}" style="color: #caa2dd; font-size: 14px;" th:text="'* ' + ${error}"></div>
+                <input type="date" th:field="*{fecha}" required>
+                <input type="time" th:field="*{hora_inicio}" required>
+                <input type="time" th:field="*{hora_fin}" required>
+                <input class="submit_btn" type="submit" value="Añadir Registro">
+            </form>
+        </div>
+            
+       
+    </main>
+
+</body>
+</html>
