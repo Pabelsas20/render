@@ -1,0 +1,13 @@
+D:\Practicas\empleados\infrastructure\src\main\java\com\app\Controllers\EmpleadoController.java
+D:\Practicas\empleados\infrastructure\src\main\java\com\app\Database\Postgre\EmpleadoJpa.java
+D:\Practicas\empleados\infrastructure\src\main\java\com\app\Controllers\EmpleadoHorasController.java
+D:\Practicas\empleados\infrastructure\src\main\java\com\app\Database\Mongo\EmpleadoHorasEntity.java
+D:\Practicas\empleados\infrastructure\src\main\java\com\app\Database\Postgre\EmpleadoMapper.java
+D:\Practicas\empleados\infrastructure\src\main\java\com\app\Database\Mongo\EmpleadoHorasAdapter.java
+D:\Practicas\empleados\infrastructure\src\main\java\com\app\Database\Json\JsonRepository.java
+D:\Practicas\empleados\infrastructure\src\main\java\com\app\Database\Postgre\EmpleadoAdapter.java
+D:\Practicas\empleados\infrastructure\src\main\java\com\app\Database\Json\EmpleadoJsonMapper.java
+D:\Practicas\empleados\infrastructure\src\main\java\com\app\Database\Mongo\EmpleadoHorasMongo.java
+D:\Practicas\empleados\infrastructure\src\main\java\com\app\Database\Postgre\EmpleadoEntity.java
+D:\Practicas\empleados\infrastructure\src\main\java\com\app\Database\Json\EmpleadoJson.java
+D:\Practicas\empleados\infrastructure\src\main\java\com\app\Database\Mongo\EmpleadoHorasMapper.java

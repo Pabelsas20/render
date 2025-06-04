@@ -1,0 +1,13 @@
+com\app\Database\Json\JsonRepository.class
+com\app\Database\Json\EmpleadoJsonMapper.class
+com\app\Database\Mongo\EmpleadoHorasMapperImpl.class
+com\app\Database\Mongo\EmpleadoHorasEntity.class
+com\app\Controllers\EmpleadoHorasController.class
+com\app\Database\Json\JsonRepository$1.class
+com\app\Database\Json\EmpleadoJsonMapperImpl.class
+com\app\Controllers\EmpleadoController.class
+com\app\Database\Mongo\EmpleadoHorasMapper.class
+com\app\Database\Mongo\EmpleadoHorasAdapter.class
+com\app\Database\Json\EmpleadoJson.class
+com\app\Database\Mongo\EmpleadoHorasMongo.class
+com\app\Database\Mongo\EmpleadoHorasAdapter$ResourceNotFoundException.class

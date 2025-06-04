@@ -1,0 +1,3 @@
+com\app\Entities\Empleado.class
+com\app\Entities\EmpleadoHoras.class
+com\app\Validation\HorasValidation.class
